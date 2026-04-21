@@ -87,7 +87,7 @@ namespace ASP.NET.API.Controllers
             bool hasReservations = DataStore.Reservations.Any(res => res.RoomId == id);
             if (hasReservations)
             {
-                return Conflict(new { message = "Cannot delete this room because it has existing reservations." });
+                return Conflict(new { message = "Cannot delete this room because it has existing reservations ." });
             }
 
             DataStore.Rooms.Remove(room);
